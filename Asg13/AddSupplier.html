@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<link rel="stylesheet" href="../css/style.css" type="text/css" />
+		<title>Adding Supplier</title>
+
+	</head>
+	<body>
+		<div id="page" align="center">
+			<div id="header">
+				<div id="companyname" align="left">EasyShop Manager</div>
+ 				<div align="right" class="links_menu" id="menu"><a href="AdminHome.jsp" style="text-decoration:none">Home</a> | <a href="../ContactUs.html" style="text-decoration:none">Contact Us</a></div>
+			</div>
+			<div id="content">
+				<div id="leftpanel">
+					<div class="table_top">
+						<span class="title_panel">Transactions</span>
+					</div>
+					<div class="table_content">
+						<div class="table_text">
+							<span class="news_more"></span><br/>
+							<span class="news_more">Customer</span><br/>
+							&nbsp;&nbsp;&nbsp;<span class="news_more"><a href="CreateCustomer.html" style="text-decoration:none">Add</a></span><br/>
+							<span class="news_more">Supplier</span><br/>
+							&nbsp;&nbsp;&nbsp;<span class="news_more"><a href="CreateSupplier.html" style="text-decoration:none">Add</a></span><br/>
+							&nbsp;&nbsp;&nbsp;<span class="news_more"><a href="../BaseController?function=supplier&action=view" style="text-decoration:none">Edit</a></span><br/>
+							&nbsp;&nbsp;&nbsp;<span class="news_more"><a href="../BaseController?function=supplier&action=dview" style="text-decoration:none">Delete</a></span><br/>
+							<span class="news_more">Item</span><br/>
+							&nbsp;&nbsp;&nbsp;<span class="news_more"><a href="AddItem.html" style="text-decoration:none">Add</a></span><br/>
+							<span class="news_more">Retail Outlet</span><br/>
+							&nbsp;&nbsp;&nbsp;<span class="news_more"><a href="AddRetailOutlet.html" style="text-decoration:none">Add</a></span><br/>
+							<span class="news_more">Report</span><br/>
+							&nbsp;&nbsp;&nbsp;<span class="news_more"><a href="BillAmountAllDates.html" style="text-decoration:none">Bill Amount - All Dates</a></span><br/>
+							&nbsp;&nbsp;&nbsp;<span class="news_more"><a href="BillAmountPurchaseBased.html" style="text-decoration:none">Bill Amount - Purchase Based</a></span><br/>
+							&nbsp;&nbsp;&nbsp;<span class="news_more"><a href="BillAmountBetweenDates.html" style="text-decoration:none">Bill Amount - Between Dates</a></span><br/>
+							&nbsp;&nbsp;&nbsp;<span class="news_more"><a href="BilledCustomers.html" style="text-decoration:none">Billed Customers</a></span><br/>
+							&nbsp;&nbsp;&nbsp;<span class="news_more"><a href="SearchedItems.html" style="text-decoration:none">Searched Items</a></span><br/>
+							&nbsp;&nbsp;&nbsp;<span class="news_more"><a href="../BaseController?function=report&action=reportOnItemAndQuantity" style="text-decoration:none">All Items</a></span><br/>
+							&nbsp;&nbsp;&nbsp;<span class="news_more"><a href="ItemsInAnOutlet.html" style="text-decoration:none">Items in an Outlet</a></span><br/>
+						</div>
+					</div>
+					<div class="table_bottom">
+						<img src="../images/table_bottom.jpg" width="204" height="23" border="0" alt="" />
+					</div>
+					<br />
+				</div>
+				<div id="contenttext">
+					<h3 align="center">Add Supplier</h3>
+					<form name="suppform">
+						<input type="hidden" name="function" value="supplier"/>
+						<input type="hidden" name="action" value="create"/>
+						<table>
+							<tr><td align="right">Supplier Name</td><td align="right"><input type="text" name="sName" title="3-20 alphabets and spaces only" maxlength="20" onblur="this.value=removeSpaces(this.value);" onkeypress="return onlyAlphabets(event,this);"/></td></tr>
+							<tr><td align="right">Email Id</td><td><input type="text" name="emailId" title="Eg. abc@example.com" onblur="this.value=removeSpaces(this.value);"/></td></tr>
+							<tr><td align="right">Contact No</td><td><input type="text" name="contactNo" title="Eg. 222-333-444"/></td></tr>
+							<tr><td></td></tr>
+							<tr><td></td></tr>
+							<tr><td colspan="2" align="center"><input type="button" value="Add" onClick=” checkVarType() />&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Reset" /></td></tr>
+						</table>
+					</form>
+				</div>
+				<div id="contenttext">
+					<br />
+				</div>
+				<div class="footer">
+					<br />
+					&copy; Infosys Limited
+				</div>
+			</div>
+		</div>
+		<script>
+		function checkVarType() 
+  		{ 
+         		contactNum = Number(contactNum); 
+         		document.write(“Data type     of     contactNum     after     conversion     is     “+typeof(contactNum)); 
+		} 
+		</script>
+	</body>
+</html>
